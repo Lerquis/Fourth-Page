@@ -1,0 +1,89 @@
+.lineup {
+  background-color: $rosa;
+  padding: $separacion 0;
+  h3,
+  p {
+    text-align: center;
+    color: $blanco;
+  }
+  .dia {
+    text-transform: uppercase;
+    margin: $separacion 0;
+  }
+}
+
+.escenarios-contenedor {
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $separacion;
+  }
+  .escenario {
+    padding-top: $separacion / 2;
+    margin-bottom: 2rem;
+  }
+  .nombre-escenario {
+    color: $negro;
+    font-size: 2rem;
+    font-weight: $delgada;
+    &:after {
+      //Crea un pseudo-elemento despues del ".nombre-escenario. Literalmente no es nada, entonces se le tiene que asiganar todo
+      content: "";
+      width: 20rem;
+      height: 10rem;
+      display: block; //Para hacerlo un elemnto con "fisico"
+      margin: 2rem auto 0 auto;
+      background-size: 15rem;
+      background-repeat: no-repeat;
+      background-position: center center; //Alinea el backgroun hori y verticalmente
+    }
+  }
+}
+
+.edm .nombre-escenario {
+  &:after {
+    //Agrega el background image del pseudoelemento creado anteriormente
+    background-image: url(../img/icono_edm.png);
+  }
+}
+.rock .nombre-escenario {
+  &:after {
+    //Agrega el background image del pseudoelemento creado anteriormente
+    background-image: url(../img/icono_rock.png);
+  }
+}
+
+.calendario {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+  li {
+    padding: $separacion / 2;
+    font-weight: $bold;
+    span {
+      font-weight: $regular;
+    }
+  }
+}
+
+/*.calendario li:nth-child(2n + 1) {
+  //Este selector lo que hace es ir turnado de uno si otro no hasta el final de esos objetos
+  //Lo que 2n + 1 significa es= 2(0) + 1 = 1
+  //Despues sigue a 2(1) + 1 = 3 y asi sucesivamente. Es un iterador en css
+  background-color: red;
+}Seguido se puede ver otra manera de como hacerlo*/
+
+.bg-verde .calendario li:nth-child(odd) {
+  //Agarra los # impares de esa lista.
+  //Para los # pares, se utiliza "even" de parametro
+  background-color: darken(
+    $verde,
+    10
+  ); //Darken, funcion que oscurece. En los parametros el color e intensidad
+  //DARKEN SOLO EXISTE EN SASS, NO EN CSS
+  //Tambien existe lighten, para aclarecer obviamente
+}
+
+.bg-amarillo .calendario li:nth-child(odd) {
+  background-color: darken($amarillo, 25);
+}

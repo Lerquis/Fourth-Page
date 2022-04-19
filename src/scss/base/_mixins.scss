@@ -1,0 +1,19 @@
+//Un mixin es como una variable que contiene muchas variables, o tambien se puede tomar como una funcion
+@mixin telefono {
+  //Puede tomar parametros. En el archivo donde se llame la funcion, se escribe el dato, en este se escribe el nombre de la varaible con $variable
+  @media (min-width: 480px) {
+    @content; //Para pasar muchas propiedades y dinamicas
+  }
+}
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content; //Para pasar muchas propiedades y dinamicas
+  }
+}
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content; //Para pasar muchas propiedades y dinamicas. Las propiedades se tienen que encontrar entre {   }
+  }
+}
+
+//SE PUEDE CREAR UN MIXIN CON LAS CARACTERISTICAS DEL GRID Y LLAMARLOS POR PARAMETRO

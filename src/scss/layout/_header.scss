@@ -1,0 +1,41 @@
+.header {
+  background-color: $verde;
+  .contenido-header {
+    //Se pone aqui porque es hijo de .header{} (TENER MUCHO CUIDADO DE SELCCIONAR BIEN EL PADRE)
+    padding: $separacion / 2 0;
+    @include tablet {
+      display: flex;
+      justify-content: space-between; //Mueve uno a la izquierda, otro a la derecha
+      align-items: center; //Alinea verticalmente
+    }
+  }
+  h1 {
+    text-align: center;
+    color: $blanco;
+    margin-bottom: 1rem;
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+  .navegacion-principal {
+    display: flex;
+    gap: 2rem; /*Para la separacion de links. O de la siguiente manera
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;*/
+    justify-content: center; //Se puede utilizar es justify content porque se tiene un display flex
+    a {
+      color: $blanco;
+      font-size: 2rem;
+      &:hover {
+        //El $ es para llamara a la clase padre, en este caso, seria a
+        color: $amarillo;
+      }
+    }
+  }
+  &.fijo {
+    position: fixed; //Para que tome todo el espacio
+    width: 100%;
+    box-shadow: 0 0.3rem 0.4rem #444; //Agregar un sombrado
+  }
+}

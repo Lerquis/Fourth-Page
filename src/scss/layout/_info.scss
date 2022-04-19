@@ -1,0 +1,27 @@
+.info {
+  padding: $separacion 0;
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+  }
+  .imagen {
+    margin-bottom: 3rem;
+  }
+  .info-parrafo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; //Para centrar con la imagen
+  }
+  .info-parrafo__titulo {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  .info-parrafo__fecha {
+    font-weight: $bold;
+    color: $rosa;
+  }
+  .info-parrafo__texto {
+    line-height: 1.5;
+  }
+}

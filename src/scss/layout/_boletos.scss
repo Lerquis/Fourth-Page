@@ -1,0 +1,60 @@
+.boletos {
+  padding: $separacion 0;
+  h3 {
+    text-align: center;
+    color: $blanco;
+  }
+  .contenedor-boletos {
+    margin-top: $separacion / 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $separacion;
+  }
+  .plan {
+    p {
+      color: $blanco;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+}
+.pase {
+  width: 100%; //Las tablas no utlizan el 100% de su espacio, hay que decirles
+  border-spacing: 0; //Las tablas traen un espaciado entre ellas por default, esta es la linea de codigo para eliminarlo
+  thead {
+    background-color: $rosa;
+    th {
+      padding: $separacion / 4;
+      color: $blanco;
+      text-transform: uppercase;
+      font-weight: $delgada;
+      font-size: 2rem;
+    }
+  }
+  tbody {
+    background-color: $blanco;
+    td {
+      padding: $separacion / 4;
+      border-bottom: 1px solid #e1e1e1;
+    }
+    //Para quitar el borde del ultimo td, se tiene que seleccionar el ultimo tr, ya que en todos los casos
+    //el td siempre va a ser el ultimo (Ver html para entender mejor)
+    tr {
+      &:last-of-type {
+        td {
+          border: none;
+        }
+      }
+    }
+  }
+  tfoot {
+    background-color: $morado;
+    td {
+      padding: $separacion / 4;
+      color: $blanco;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+  }
+}

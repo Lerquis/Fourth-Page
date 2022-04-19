@@ -1,0 +1,55 @@
+.galeria {
+  padding: $separacion 0;
+  h3 {
+    text-align: center;
+  }
+}
+
+.galeria-imagenes {
+  padding: 0;
+  list-style: none;
+  margin-top: $separacion;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: $separacion;
+  li {
+    margin: 1rem 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: $separacion / 2;
+  }
+  @include desktop {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: $separacion / 2;
+  }
+}
+
+.overlay {
+  //Son los estilos para poner la imagen en grande, "encima" de la pagina
+  position: fixed; //posicion fija, ahi se queda la imagen
+  background-color: rgba(0, 0, 0, 0.5); //Para que se pueda ver la imagen
+  width: 100%;
+  height: 100%;
+  top: 0; //Estas 3 de atras son necesarias para que la imagen aparezca
+  display: grid;
+  place-items: center; //Propiedad que da el display:grid. Centra vertical y horizontalmente
+}
+
+.btn-cerrar {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: grid;
+  place-items: center;
+  font-weight: $bold;
+  font-size: 3rem;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+  }
+}

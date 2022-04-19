@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="build/css/app.css" />
+    <title>Rock & EDM Festival</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="contenedor contenido-header">
+        <h1>Rock & EDM Festival</h1>
+        <nav class="navegacion-principal">
+          <a href="#lineup">Line Up</a><a href="#galeria">Galeria</a
+          ><a href="#boletos">Boletos</a>
+        </nav>
+      </div>
+    </header>
+    <div class="video">
+      <div class="overlay">
+        <div class="contenedor contenido-video">
+          <h2>
+            Rock & EDM Festival
+            <span>Julio 2021 San Carlos, Costa Rica</span>
+          </h2>
+        </div>
+      </div>
+      <video autoplay muted loop>
+        <!--Por si el navegador no puede recorrer ciertos tipos de video, para poner varios-->
+        <source src="video/concierto.mp4" type="video/mp4" />
+        <source src="video/concierto.ogg" type="video/ogg" />
+        <source src="video/concierto.webm" type="video/webm" />
+      </video>
+    </div>
+    <div class="info contenedor">
+      <div class="imagen">
+        <img src="build/img/imagen_vocalista.jpg" alt="vocalista" />
+      </div>
+      <div class="info-parrafo">
+        <h2 class="info-parrafo__titulo">Rock & EDM Festival</h2>
+        <p class="info-parrafo__fecha">Julio 2021 San Carlos, Costa Rica</p>
+        <p class="info-parrafo__texto">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, enim
+          facere iste pariatur est velit ipsa praesentium minus laudantium
+          aspernatur dolores, veniam exercitationem doloribus ipsum
+        </p>
+      </div>
+    </div>
+    <section class="lineup" id="lineup">
+      <h3>Line Up</h3>
+      <p class="dia">Viernes 21</p>
+      <div class="escenarios-contenedor contenedor">
+        <div class="escenario rock bg-amarillo">
+          <p class="nombre-escenario">Escenario Rock</p>
+          <ul class="calendario">
+            <li>24:00 | <span>Brent</span></li>
+            <li>22:00 | <span>Jennifer</span></li>
+            <li>20:00 | <span>Drake</span></li>
+            <li>19:00 | <span>Doja Cat</span></li>
+            <li>18:00 | <span>Alina Baraz</span></li>
+            <li>17:00 | <span>H.E.R</span></li>
+          </ul>
+        </div>
+        <div class="escenario edm bg-verde">
+          <p class="nombre-escenario">Escenario EDM</p>
+          <ul class="calendario">
+            <li>24:00 | <span>Bad Bunny</span></li>
+            <li>22:00 | <span>J. Balvin</span></li>
+            <li>20:00 | <span>Nicki Nicole</span></li>
+            <li>19:00 | <span>Sech</span></li>
+            <li>18:00 | <span>Christian Nodal</span></li>
+            <li>17:00 | <span>Pablo Londra</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="dia">Sabado 22</p>
+      <div class="escenarios-contenedor contenedor">
+        <div class="escenario rock bg-verde">
+          <p class="nombre-escenario">Escenario Rock</p>
+          <ul class="calendario">
+            <li>24:00 | <span>Brent</span></li>
+            <li>22:00 | <span>Jennifer</span></li>
+            <li>20:00 | <span>Drake</span></li>
+            <li>19:00 | <span>Doja Cat</span></li>
+            <li>18:00 | <span>Alina Baraz</span></li>
+            <li>17:00 | <span>H.E.R</span></li>
+          </ul>
+        </div>
+        <div class="escenario edm bg-amarillo">
+          <p class="nombre-escenario">Escenario EDM</p>
+          <ul class="calendario">
+            <li>24:00 | <span>Bad Bunny</span></li>
+            <li>22:00 | <span>J. Balvin</span></li>
+            <li>20:00 | <span>Nicki Nicole</span></li>
+            <li>19:00 | <span>Sech</span></li>
+            <li>18:00 | <span>Christian Nodal</span></li>
+            <li>17:00 | <span>Pablo Londra</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="galeria contenedor" id="galeria">
+      <h3>Galeria</h3>
+
+      <ul class="galeria-imagenes">
+        <!--Generado mediante JS-->
+      </ul>
+    </section>
+    <section class="boletos bg-verde" id="boletos">
+      <h3>Boletos</h3>
+      <div class="contenedor-boletos contenedor">
+        <div class="basico plan">
+          <p>Pase 1 dia</p>
+          <table class="pase">
+            <thead>
+              <!--Parte superior de la tabla-->
+              <tr>
+                <!--Celda de la tabla-->
+                <th>
+                  <!--th es para el head, definir los espacios de como se va a conformar la tabla-->
+                  Incluye
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--Cuerpo de la tabla-->
+              <tr>
+                <td>
+                  <!--td es para el body y foot-->
+                  Acceso a todos los escenarios
+                </td>
+              </tr>
+              <tr>
+                <!--Aqui se esta creando otra fila-->
+                <td>Comida y bebida</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <!--Parte inferior de la tabla-->
+              <tr>
+                <td>$100</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="premium plan">
+          <p>Pase 2 dias</p>
+          <table class="pase">
+            <thead>
+              <!--Parte superior de la tabla-->
+              <tr>
+                <!--Celda de la tabla-->
+                <th>
+                  <!--th es para el head, definir los espacios de como se va a conformar la tabla-->
+                  Incluye
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--Cuerpo de la tabla-->
+              <tr>
+                <td>
+                  <!--td es para el body y foot-->
+                  Acceso a todos los escenarios
+                </td>
+              </tr>
+              <tr>
+                <!--Aqui se esta creando otra fila-->
+                <td>Comida y bebida</td>
+              </tr>
+              <tr>
+                <td>Camisa del evento</td>
+              </tr>
+              <tr>
+                <td>Acceso VIP</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <!--Parte inferior de la tabla-->
+              <tr>
+                <td>$180</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>Rock & EDM Festival. Todos los derechos reservados</p>
+    </footer>
+
+    <script src="build/js/bundle.js"></script>
+  </body>
+</html>
